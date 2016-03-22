@@ -19,7 +19,7 @@ module Buildpack::Commands
     end
 
     def run
-      buildpacks = %w(heroku/nodejs terence/ember-cli-deploy)
+      buildpacks = %w(heroku/nodejs hone/ember-cli-deploy)
       fastboot   = dependencies["ember-cli-fastboot"]
       buildpacks << "hone/static" unless fastboot
 
