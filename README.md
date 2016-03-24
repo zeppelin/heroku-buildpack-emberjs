@@ -15,7 +15,7 @@ With the Node.js buildpack, you can rely on Heroku's [first class support](https
 
 The ember-cli-deploy buildpack requires the ember app to be using `ember-cli`. In addition, you can customize your build on Heroku by using the [ember-cli-deploy](http://ember-cli.com/ember-cli-deploy/) build pipeline. Fastboot is supported out of the box. The buildpack will build the assets, install any fastboot dependencies, and setup a default web process type to get you going quickly.
 
-When not using fastboot, the static buildpack uses nginx to efficiently serve static assets while also handling HTML5 pushState, proxying, and other [common fronend hosting configurations](https://github.com/heroku/heroku-buildpack-static#configuration).
+When not using fastboot, the static buildpack uses nginx to efficiently serve static assets while also handling HTML5 pushState, proxying, and other [common frontend hosting configurations](https://github.com/heroku/heroku-buildpack-static#configuration).
 
 ## Usage
 
