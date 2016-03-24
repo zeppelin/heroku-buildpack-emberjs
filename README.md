@@ -22,7 +22,7 @@ When not using fastboot, the static buildpack uses nginx to efficiently serve st
 This buildpack has a binary component, so it needs to be compiled beforehand. It's easiest just to use the buildpack with the prebuilt binary.
 
 ```
-$ heroku buildpacks:set https://codon-buildpacks.s3.amazonaws.com/buildpacks/heroku/ember-cli-deploy.tgz
+$ heroku buildpacks:set https://codon-buildpacks.s3.amazonaws.com/buildpacks/heroku/emberjs.tgz
 ```
 
 Once the buildpack is set, you can `git push heroku masster` like any other Heroku application.
