@@ -19,9 +19,9 @@ module Buildpack::Commands
     end
 
     def run
-      buildpacks = %w(heroku/nodejs hone/ember-cli-deploy)
+      buildpacks = %w(heroku/nodejs heroku/ember-cli-deploy)
       fastboot   = dependencies["ember-cli-fastboot"]
-      buildpacks << "hone/static" unless fastboot
+      buildpacks << "heroku/static" unless fastboot
 
       npm_config_production_file = "#{@env_dir}/NPM_CONFIG_PRODUCTION"
       if Dir.exist?(@env_dir) && !File.exist?(npm_config_production_file)
