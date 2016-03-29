@@ -1,5 +1,5 @@
 # heroku-buildpack-emberjs
-**NOTE**: This buildpack is in experimental OSS project. If you have [Ember.js on Heroku](https://www.heroku.com/emberjs) feedback, please [submit some](http://help.heroku.com/new/single-page-apps).
+**NOTE**: This buildpack is qn experimental OSS project. If you have [Ember.js on Heroku](https://www.heroku.com/emberjs) feedback, please [submit some](http://help.heroku.com/new/single-page-apps).
 
 ## Intro
 
