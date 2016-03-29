@@ -1,5 +1,5 @@
 # heroku-buildpack-emberjs
-**NOTE**: This buildpack is in experimental OSS project. If you have Ember.js on Heroku feedback, please [submit some](http://help.heroku.com/new/single-page-apps).
+**NOTE**: This buildpack is in experimental OSS project. If you have [Ember.js on Heroku](https://www.heroku.com/emberjs) feedback, please [submit some](http://help.heroku.com/new/single-page-apps).
 
 ## Intro
 
@@ -14,6 +14,28 @@ $ heroku buildpacks:set https://codon-buildpacks.s3.amazonaws.com/buildpacks/her
 ```
 
 Once the buildpack is set, you can `git push heroku masster` like any other Heroku application.
+
+### EmberJS
+
+Deploying a standard ember.js app on Heroku is simple. You can run the following commands to get started.
+
+```
+$ heroku create
+$ heroku buildpacks:set https://codon-buildpacks.s3.amazonaws.com/buildpacks/heroku/emberjs.tgz
+$ git push heroku master
+$ heroku open
+```
+
+### Fastboot
+
+Deploying an ember fastboot on Heroku is just as simple. You can run the following commands to get started.
+
+```
+$ heroku create
+$ heroku buildpacks:set https://codon-buildpacks.s3.amazonaws.com/buildpacks/heroku/emberjs.tgz
+$ git push heroku master
+$ heroku open
+```
 
 ## Architecture
 
