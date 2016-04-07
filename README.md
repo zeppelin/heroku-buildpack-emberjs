@@ -13,7 +13,7 @@ This buildpack has a binary component, so it needs to be compiled beforehand. It
 $ heroku buildpacks:set https://codon-buildpacks.s3.amazonaws.com/buildpacks/heroku/emberjs.tgz
 ```
 
-Once the buildpack is set, you can `git push heroku masster` like any other Heroku application.
+Once the buildpack is set, you can `git push heroku master` like any other Heroku application.
 
 ### EmberJS
 
