@@ -37,6 +37,24 @@ $ git push heroku master
 $ heroku open
 ```
 
+### Problems
+
+If you get an error setting the buildpack like the following:
+
+```
+$ heroku buildpacks:set https://codon-buildpacks.s3.amazonaws.com/buildpacks/heroku/emberjs.tgz
+▸ Invalid buildpack `heroku/emberjs`
+```
+
+This means that `npm` is having issues keeping the core heroku toolbelt plugins up to date. To fix this you can run these commands:
+
+```
+$ rm -rf ~/.heroku/node_modules/heroku-apps
+$ heroku update
+```
+
+This causes the core plugins to be redownloaded with the latest version.
+
 ## Architecture
 
 The buildpack is built on top of three other buildpacks, to deliver a great Ember experience.
