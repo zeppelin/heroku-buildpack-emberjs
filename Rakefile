@@ -20,7 +20,7 @@ task :stage do
   puts @dir
 end
 
-desc "Publish buildpack to https://buildkits.herokuapp.com"
+desc "Publish buildpack to https://buildkits.heroku.com"
 task :publish, [:name] => :stage do |t, args|
   Dir.chdir(@dir) do
     sh "heroku buildkits:publish #{args[:name]}"
@@ -28,7 +28,7 @@ task :publish, [:name] => :stage do |t, args|
 end
 
 namespace :dev do
-  desc "Publish dev build of buildpack to https://buildkits.herokuapp.com"
+  desc "Publish dev build of buildpack to https://buildkits.heroku.com"
   task :publish, [:name] do |t, args|
     cwd  = File.dirname(__FILE__)
 
