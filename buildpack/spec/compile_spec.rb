@@ -18,7 +18,7 @@ RSpec.describe "compile" do
   end
 
   context "standard ember app" do
-    let(:app) { "github-issues-demo" }
+    let(:app) { "super-rentals" }
 
     it "should use all three buildpacks" do
       output, _, status = run_bin("compile", "#{build_dir}/#{app}", cache_dir, env_dir)
@@ -26,8 +26,8 @@ RSpec.describe "compile" do
       expect(status).to be_success
       expect(output).to include("NPM_CONFIG_PRODUCTION=false")
       expect(output).to include("Fetching buildpack heroku/nodejs")
-      expect(output).to include("Fetching buildpack terence/ember-cli-deploy")
-      expect(output).to include("Fetching buildpack hone/static")
+      expect(output).to include("Fetching buildpack heroku/ember-cli-deploy")
+      expect(output).to include("Fetching buildpack heroku/static")
 
       yaml = YAML.load_file("#{build_dir}/#{app}/tmp/heroku-buildpack-release.yml")
       expect(yaml["default_process_types"]["web"]).to eq("bin/boot")
@@ -43,11 +43,11 @@ RSpec.describe "compile" do
       expect(status).to be_success
       expect(output).to include("NPM_CONFIG_PRODUCTION=false")
       expect(output).to include("Fetching buildpack heroku/nodejs")
-      expect(output).to include("Fetching buildpack terence/ember-cli-deploy")
-      expect(output).not_to include("Fetching buildpack hone/static")
+      expect(output).to include("Fetching buildpack heroku/ember-cli-deploy")
+      expect(output).not_to include("Fetching buildpack heroku/static")
 
       yaml = YAML.load_file("#{build_dir}/#{app}/tmp/heroku-buildpack-release.yml")
-      expect(yaml["default_process_types"]["web"]).to include("ember fastboot")
+      expect(yaml["default_process_types"]["web"]).to include("fastboot")
     end
   end
 end
