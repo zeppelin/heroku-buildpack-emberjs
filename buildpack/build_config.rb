@@ -8,6 +8,7 @@ def gem_config(conf)
   conf.gem mgem: 'mruby-simple-random'
   conf.gem github: 'hone/mruby-io', branch: 'popen_status'
   conf.gem github: 'hone/mruby-process', branch: 'header'
+  conf.gem github: 'mattn/mruby-onig-regexp', checksum_hash: '4873e87fc1842e8e2a417f6071b63a7d91523ef4'
   conf.enable_cxx_abi
 end
 
