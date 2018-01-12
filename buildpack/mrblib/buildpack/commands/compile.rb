@@ -19,7 +19,7 @@ module Buildpack::Commands
     end
 
     def run
-      buildpacks = %w(heroku/nodejs-v98 heroku/ember-cli-deploy)
+      buildpacks = %w(heroku/nodejs-v98 https://zeppelin/heroku-buildpack-ember-cli-deploy#mrc)
       fastboot   = dependencies["ember-cli-fastboot"]
       buildpacks << "heroku/static" unless fastboot
 
